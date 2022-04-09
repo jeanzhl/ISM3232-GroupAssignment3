@@ -1,0 +1,41 @@
+using System;
+
+namespace ISM3232_Group_Assignment_3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Capture the information from the console as a string
+            String InputName = Console.ReadLine();
+
+            // Define a string for the output
+            String OutputName = "";
+
+            // Define a character variable initialized as empty
+            char letters = ' ';
+
+            if (InputName.Length > 250 || InputName.Contains(' '))
+            {
+                Console.WriteLine("Invalid input!");
+            }
+            else
+            {    // Begin a foreach loop to process each character of the readline
+                foreach (char placeholder in InputName)
+
+                    if (placeholder == letters)
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        letters = placeholder;
+                        OutputName += placeholder;
+                    }
+            }
+                
+            
+            Console.WriteLine(OutputName);
+        }
+    }
+}
